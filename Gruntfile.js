@@ -4,12 +4,12 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				files: {
-					'/.tmp/main.css': '/app/sass/main.sass'
+					'.tmp/styles/main.css': 'app/sass/main.sass'
 				}
 			},
 			dist: {
 				files: {
-					'/dist/styles/main.css': '/app/sass/main.sass'
+					'dist/styles/main.css': 'app/sass/main.sass'
 				}
 			}
 		},
@@ -18,24 +18,27 @@ module.exports = function(grunt) {
 		jade: {
 			dev: {
 				files: {
-					'/.tmp/index.html': '/app/index.jade'
+					'.tmp/index.html': 'app/index.jade'
 				}
 			},
 			dist: {
 				files: {
-					'/dist/index.html': '/app/index.jade'
+					'dist/index.html': 'app/index.jade'
 				}
 			}
 		},
 		// clean .tmp and dist
 		clean: {
+			options: {
+				force: true
+			},
 			dev: {
-				files: ['.tmp']
+				src: ['.tmp/**/*']
 			},
 			dist: {
-				files: [
-					'.tmp',
-					'/dist'
+				src: [
+					'.tmp/**/*',
+					'dist/**/*'
 				]
 			}
 		},
@@ -51,12 +54,21 @@ module.exports = function(grunt) {
 				mangle: true,
 				compress: true,
 				sourceMap: true
-			}
+			},
 			dev: {
 				files: [{
 					expand: true,
 					src: 'js/**/*.js',
-					dest: '../dist/scripts/',
+					dest: '.tmp/scripts/',
+					ext: '.min.js',
+					cwd: 'app'
+				}]
+			},
+			dist: {
+				files: [{
+					expand: true,
+					src: 'js/**/*.js',
+					dest: 'dist/scripts/',
 					ext: '.min.js',
 					cwd: 'app'
 				}]
@@ -101,23 +113,24 @@ module.exports = function(grunt) {
 			}
 		},
 		// live reload
-		browsersync: {
-			options: {
-				notify: flase,
-				background: true
-			},
+		browserSync: {
 			dev: {
-				files: [
+				src: [
 					'.tmp/**/*.html',
 					'.tmp/styles/**/*.css',
 					'.tmp/assets/**/*',
 					'.tmp/scripts/**/*.js'
 				],
-				port: 9000,
-				server: {
-					baseDir: ['.tmp'],
-					routes: {
-						'/bower_components' : './bower_components'
+				options: {
+					notify: false,
+					port: 9000,
+					background: true,
+					watchTask: true,
+					server: {
+						baseDir: '.tmp',
+						routes: {
+							'/bower_components' : './bower_components'
+						}
 					}
 				}
 			}
@@ -125,19 +138,22 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: ['app/js/**/*.js'],
-				tasks: ['eslint', 'uglify']
+				tasks: ['eslint', 'uglify:dev']
 			},
 			sass: {
 				files: ['app/sass/**/*.sass'],
-				tasks: ['sass']
+				tasks: ['sass:dev']
 			},
 			jade: {
 				files: ['app/*.jade'],
-				tasks: ['jade']
+				tasks: ['jade:dev']
 			}
 		}
 
 		// TODO add grunt-newer
+		// TODO use grunt.template 
+		// http://stackoverflow.com/questions/20020981/grunt-how-to-replace-paths-in-html-file-using-grunt-task
+		// TODO gzip
 	});
 
 	grunt.loadNpmTasks('grunt-sass');
@@ -149,10 +165,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('');
-	grunt.loadNpmTasks('');
 	//grunt.loadNpmTasks('');
 	
 	grunt.registerTask('default', ['sass:dist', 'jade:dist', 'clean:dist', 'uglify:dist', 'imagemin:dist', 'copy:dist'])
 
-	grunt.registerTask('serve', ['sass:dev', 'jade:dev', 'clean:dev', 'uglify:dev', 'copy:dev', 'browsersync:dev', 'watch'])};
+	grunt.registerTask('serve', ['clean:dev', 'sass:dev', 'jade:dev', 'uglify:dev', 'copy:dev', 'browserSync:dev', 'watch'])};
