@@ -1,5 +1,14 @@
 module.exports = function(grunt) {
 	grunt.initConfig({
+		// wiredep
+		wiredep: {
+			dev: {
+				src: ['.tmp/index.html']
+			},
+			dist: {
+				src: ['dist/index.html']
+			}
+		},
 		// compiles sass to css
 		sass: {
 			dev: {
@@ -58,19 +67,19 @@ module.exports = function(grunt) {
 			dev: {
 				files: [{
 					expand: true,
-					src: 'js/**/*.js',
+					src: '**/*.js',
 					dest: '.tmp/scripts/',
 					ext: '.min.js',
-					cwd: 'app'
+					cwd: 'app/js'
 				}]
 			},
 			dist: {
 				files: [{
 					expand: true,
-					src: 'js/**/*.js',
+					src: '**/*.js',
 					dest: 'dist/scripts/',
 					ext: '.min.js',
-					cwd: 'app'
+					cwd: 'app/js'
 				}]
 			}
 		},
@@ -156,6 +165,7 @@ module.exports = function(grunt) {
 		// TODO gzip
 	});
 
+	grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-eslint');
@@ -167,6 +177,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	//grunt.loadNpmTasks('');
 	
-	grunt.registerTask('default', ['sass:dist', 'jade:dist', 'clean:dist', 'uglify:dist', 'imagemin:dist', 'copy:dist'])
+	grunt.registerTask('default', ['sass:dist', 'jade:dist', 'clean:dist', 'uglify:dist', 'imagemin:dist', 'copy:dist', 'wiredep:dist'])
 
-	grunt.registerTask('serve', ['clean:dev', 'sass:dev', 'jade:dev', 'uglify:dev', 'copy:dev', 'browserSync:dev', 'watch'])};
+	grunt.registerTask('serve', ['clean:dev', 'sass:dev', 'jade:dev', 'uglify:dev', 'copy:dev', 'wiredep:dev', 'browserSync:dev', 'watch'])};
