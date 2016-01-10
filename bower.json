@@ -1,20 +1,22 @@
 {
-  "name": "jwoos-github-io",
+  "name": "jwoos.github.io",
+  "homepage": "https://github.com/jwoos/jwoos.github.io",
+  "authors": [
+    "Jun Woo Shin <shin.junwoo97@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
   "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
   "dependencies": {
     "bootstrap-sass": "~3.3.5"
-  },
-  "overrides": {
-    "bootstrap-sass": {
-      "main": [
-        "assets/stylesheets/_bootstrap.scss",
-        "assets/fonts/bootstrap/*",
-        "assets/javascripts/bootstrap.js"
-      ]
-    }
-  },
-  "devDependencies": {
-    "chai": "~3.4.2",
-    "mocha": "~2.3.4"
   }
 }
