@@ -1,0 +1,136 @@
+'use strict';
+
+const sites = [
+	'//heeeeeeeey.com/',
+	'//thatsthefinger.com/',
+	'//cant-not-tweet-this.com/',
+	'//eelslap.com/',
+	'//www.staggeringbeauty.com/',
+	'//burymewithmymoney.com/',
+	'//www.fallingfalling.com/',
+	'//ducksarethebest.com/',
+	'//www.trypap.com/',
+	'//www.republiquedesmangues.fr/',
+	'//www.movenowthinklater.com/',
+	'//www.partridgegetslucky.com/',
+	'//www.rrrgggbbb.com/',
+	'//beesbeesbees.com/',
+	'//www.sanger.dk/',
+	'//www.koalastothemax.com/',
+	'//www.everydayim.com/',
+	'//www.leduchamp.com/',
+	'//grandpanoclothes.com/',
+	'//www.haneke.net/',
+	'//r33b.net/',
+	'//randomcolour.com/',
+	'//cat-bounce.com/',
+	'//www.sadforjapan.com/',
+	'//www.taghua.com/',
+	'//chrismckenzie.com/',
+	'//hasthelargehadroncolliderdestroyedtheworldyet.com/',
+	'//ninjaflex.com/',
+	'//iloveyoulikeafatladylovesapples.com/',
+	'//ihasabucket.com/',
+	'//corndogoncorndog.com/',
+	'//giantbatfarts.com/',
+	'//www.ringingtelephone.com/',
+	'//www.pointerpointer.com/',
+	'//www.pleasedonate.biz/',
+	'//imaninja.com/',
+	'//willthefuturebeaweso.me/',
+	'//salmonofcapistrano.com/',
+	'//www.ismycomputeron.com/',
+	'//www.wwwdotcom.com/',
+	'//www.nullingthevoid.com/',
+	'//www.muchbetterthanthis.com/',
+	'//www.ouaismaisbon.ch/',
+	'//iamawesome.com/',
+	'//www.pleaselike.com/',
+	'//crouton.net/',
+	'//corgiorgy.com/',
+	'//www.electricboogiewoogie.com/',
+	'//www.nelson-haha.com/',
+	'//www.wutdafuk.com/',
+	'//unicodesnowmanforyou.com/',
+	'//tencents.info/',
+	'//intotime.com/',
+	'//leekspin.com/',
+	'//minecraftstal.com/',
+	'//www.riddlydiddly.com/',
+	'//www.patience-is-a-virtue.org/',
+	'//whitetrash.nl/',
+	'//www.theendofreason.com/',
+	'//zombo.com',
+	'//secretsfornicotine.com/',
+	'//pixelsfighting.com/',
+	'//crapo.la/',
+	'//baconsizzling.com/',
+	'//isitwhite.com/',
+	'//noot.space/',
+	'//tomsdog.com/',
+	'//hardcoreprawnlawn.com/',
+	'//www.omfgdogs.com/',
+	'//thefo.nz/',
+	'//oct82.com/'
+];
+
+const colorBrewerSets = [
+	'YlGn',
+	'YlGnBu',
+	'GnBu',
+	'BuGn',
+	'PuBuGn',
+	'PuBu',
+	'BuPu',
+	'RdPu',
+	'PuRd',
+	'OrRd',
+	'YlOrRd',
+	'YlOrBr',
+	'Purples',
+	'Blues',
+	'Greens',
+	'Oranges',
+	'Reds',
+	'Greys',
+	'PuOr',
+	'BrBG',
+	'PRGn',
+	'PiYG',
+	'RdBu',
+	'RdGy',
+	'RdYlBu',
+	'Spectral',
+	'RdYlGn',
+	'Accent',
+	'Dark2',
+	'Paired',
+	'Pastel1',
+	'Pastel2',
+	'Set1',
+	'Set2',
+	'Set3'
+];
+
+function getRandomInt(min, max) {
+	return Math.floor(Math.random() * (max - min)) + min;
+}
+
+let bodyRect = document.querySelector('body').getBoundingClientRect();
+
+let pattern = Trianglify({
+	height: bodyRect.height,
+	width: bodyRect.width,
+	cell_size: 75,
+	variance: '1',
+	x_colors: colorBrewerSets[getRandomInt(0, colorBrewerSets.length - 1)],
+	y_colors: 'match_x',
+});
+
+document.querySelector('body').style.backgroundImage = `url(${pattern.png()})`;
+
+document.querySelector('button.hvr-ripple-out').addEventListener('click', () => {
+	let index = getRandomInt(0, sites.length - 1);
+
+	window.location.href = sites[index];
+});

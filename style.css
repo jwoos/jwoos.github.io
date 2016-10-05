@@ -1,0 +1,100 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:700);
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+}
+
+#background {
+	width: 100%;
+	height: 100%;
+	/*background-image: url(http://i.imgur.com/FGENkXa.jpg);*/
+	background-repeat: no-repeat;
+	background-size: cover;
+	filter: blur(5px) grayscale(100%) contrast(50%);
+	position: absolute;
+}
+
+h1 {
+	color: black;
+	font-family: 'Roboto';
+	display: block;
+}
+
+p {
+	color: white;
+	font-family: 'Roboto';
+	display: block;
+}
+
+#content {
+	margin: auto auto auto auto;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+
+#inner {
+	height: 30%;
+	width: 100%;
+	text-align:center;
+}
+
+.filler {
+	height: 35%;
+}
+
+button {
+	height: 40px;
+	width: 250px;
+	color: white;
+	background-color: #3498db;
+	font-family: 'Roboto';
+	border: none;
+	display: block;
+}
+
+@-webkit-keyframes hvr-ripple-out {
+	100% {
+		top: -12px;
+		right: -12px;
+		bottom: -12px;
+		left: -12px;
+		opacity: 0;
+	}
+}
+
+@keyframes hvr-ripple-out {
+	100% {
+		top: -12px;
+		right: -12px;
+		bottom: -12px;
+		left: -12px;
+		opacity: 0;
+	}
+}
+
+.hvr-ripple-out {
+	display: inline-block;
+	vertical-align: middle;
+	transform: translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	backface-visibility: hidden;
+	position: relative;
+}
+
+.hvr-ripple-out:before {
+	content: '';
+	position: absolute;
+	border: #3498db solid 6px;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	animation-duration: 1s;
+}
+
+.hvr-ripple-out:hover:before, .hvr-ripple-out:focus:before, .hvr-ripple-out:active:before {
+	animation-name: hvr-ripple-out;
+}
