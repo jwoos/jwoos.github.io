@@ -13,4 +13,4 @@ share: false
 ads: false
 ---
 
-My about page
+A human.

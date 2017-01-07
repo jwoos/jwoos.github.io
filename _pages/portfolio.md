@@ -15,8 +15,8 @@ ads: false
 ---
 
 <div class="tiles">
-{% for post in site.categories.portfolio %}
-  {% include post-grid.html %}
-{% endfor %}
+	{% for post in site.categories.portfolio %}
+		{% include post-list.html %}
+	{% endfor %}
 </div>
 

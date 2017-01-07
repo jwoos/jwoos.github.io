@@ -15,7 +15,7 @@ ads: false
 ---
 
 <div class="tiles">
-{% for post in site.categories.blog %}
-  {% include post-list.html %}
-{% endfor %}
+	{% for post in site.categories.blog %}
+		{% include post-list.html %}
+	{% endfor %}
 </div>
