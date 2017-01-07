@@ -17,3 +17,5 @@ yarn-error.log
 
 *.swo
 *.swp
+
+.sass-cache/
