@@ -13,6 +13,6 @@ image:
 
 <div class="tiles">
 {% for post in site.categories.blog %}
-  {% include post-list-bullets.html %}
+  {% include post-list.html %}
 {% endfor %}
 </div>
