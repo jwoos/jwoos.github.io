@@ -1,6 +1,6 @@
 ---
 layout: article
-title: About
+title:
 date:
 modified:
 excerpt:
