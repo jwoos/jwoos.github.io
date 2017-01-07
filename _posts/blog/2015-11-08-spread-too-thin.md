@@ -2,7 +2,7 @@
 layout: article
 title: Spread Too Thin
 categories: blog
-modified: 2016-06-01T16:28:11-04:00
+modified:
 tags: []
 comments: true
 ads: false

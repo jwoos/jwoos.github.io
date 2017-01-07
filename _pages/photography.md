@@ -1,10 +1,10 @@
 ---
 layout: archive
-title: "Portfolio"
+title: Photography
 date:
 modified:
 excerpt:
-permalink: /portfolio/
+permalink: /photography/
 tags: []
 image:
   feature:
@@ -15,8 +15,8 @@ ads: false
 ---
 
 <div class="tiles">
-{% for post in site.categories.portfolio %}
-  {% include post-grid.html %}
+{% for post in site.categories.photography %}
+  {% include post-list.html %}
 {% endfor %}
 </div>
 

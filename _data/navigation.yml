@@ -1,16 +1,21 @@
 # Site navigation links
 
+- title: About
+  url: /about/
+  excerpt:
+  image:
+
 - title: Blog
   url: /blog/
-  excerpt: "Just another blog"
+  excerpt:
   image:
 
 - title: Portfolio
   url: /portfolio/
-  excerpt: "A portfolio"
+  excerpt:
   image:
 
-- title: About
-  url: /about/
-  excerpt: "About Jun woo Shin"
+- title: Photography
+  url: /photography/
+  excerpt:
   image:

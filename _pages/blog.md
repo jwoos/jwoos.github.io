@@ -1,7 +1,7 @@
 ---
 layout: archive
-title: "Blog"
-date: 2014-05-30T11:39:03-04:00
+title: Blog
+date:
 modified:
 excerpt:
 permalink: /blog/
@@ -9,6 +9,9 @@ tags: []
 image:
   feature:
   teaser:
+  thumb:
+share: false
+ads: false
 ---
 
 <div class="tiles">

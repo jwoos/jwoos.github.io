@@ -1,14 +1,14 @@
 ---
 layout: article
 title: Straight Down A SoHo Street
-categories: blog
-modified: 2016-06-01T16:28:11-04:00
+categories: photography
+modified:
 tags: []
 comments: true
 ads: false
 ---
 
-<a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/shinjunwoo97/27650385840/in/dateposted-public/" title="DSC_6690.jpg"><img src="https://c1.staticflickr.com/8/7490/27650385840_8e431487da_h.jpg" width="100%" height="auto" alt="DSC_6690.jpg"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+<a data-flickr-embed="true" href="https://www.flickr.com/photos/shinjunwoo97/27650385840/in/dateposted-public/" title="DSC_6690.jpg"><img src="https://c1.staticflickr.com/8/7490/27650385840_8e431487da_h.jpg" width="100%" height="auto" alt="DSC_6690.jpg"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
 
 > Nikon D5300  
 > 18mm | F/4 | 1/800 sec | ISO 100
