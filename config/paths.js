@@ -1,12 +1,12 @@
-var path = require('path');
-var fs = require('fs');
+const path = require('path');
+const fs = require('fs');
 
 // Make sure any symlinks in the project folder are resolved:
 // https://github.com/facebookincubator/create-react-app/issues/637
-var appDirectory = fs.realpathSync(process.cwd());
-function resolveApp(relativePath) {
+const appDirectory = fs.realpathSync(process.cwd());
+const resolveApp = (relativePath) => {
 	return path.resolve(appDirectory, relativePath);
-}
+};
 
 // We support resolving modules according to `NODE_PATH`.
 // This lets you use absolute paths in imports inside large monorepos:
@@ -23,7 +23,7 @@ function resolveApp(relativePath) {
 // Otherwise, we risk importing Node.js core modules into an app instead of Webpack shims.
 // https://github.com/facebookincubator/create-react-app/issues/1023#issuecomment-265344421
 
-var nodePaths = (process.env.NODE_PATH || '')
+const nodePaths = (process.env.NODE_PATH || '')
 	.split(process.platform === 'win32' ? ';' : ':')
 	.filter(Boolean)
 	.filter(folder => !path.isAbsolute(folder))

@@ -9,13 +9,13 @@ const paths = require('./paths');
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // In development, we always serve from the root. This makes config easier.
-var publicPath = '/';
+const publicPath = '/';
 // `publicUrl` is just like `publicPath`, but we will provide it to our app
 // as %PUBLIC_URL% in `index.html` and `process.env.PUBLIC_URL` in JavaScript.
 // Omit trailing slash as %PUBLIC_PATH%/xyz looks better than %PUBLIC_PATH%xyz.
-var publicUrl = '';
+const publicUrl = '';
 // Get environment variables to inject into our app.
-var env = getClientEnvironment(publicUrl);
+const env = getClientEnvironment(publicUrl);
 
 // This is the development configuration.
 // It is focused on developer experience and fast rebuilds.
@@ -136,12 +136,13 @@ module.exports = {
 			// In production, we use a plugin to extract that CSS to a file, but
 			// in development "style" loader enables hot editing of CSS.
 			{
-				test: /\.css$/,
-				loader: 'style!css?importLoaders=1!postcss'
-			},
-			{
 				test: /\.scss$/,
-				loader: 'style!css?importLoaders=1!sass'
+				loaders: [
+					'style',
+					'css?importLoaders=1',
+					'postcss',
+					'sass'
+				]
 			},
 			// JSON is not enabled by default in Webpack but both Node and Browserify
 			// allow it implicitly so we also enable it.

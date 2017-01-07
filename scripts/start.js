@@ -6,25 +6,25 @@ process.env.NODE_ENV = 'development';
 // https://github.com/motdotla/dotenv
 require('dotenv').config({silent: true});
 
-var chalk = require('chalk');
-var webpack = require('webpack');
-var WebpackDevServer = require('webpack-dev-server');
-var historyApiFallback = require('connect-history-api-fallback');
-var httpProxyMiddleware = require('http-proxy-middleware');
-var detect = require('detect-port');
-var clearConsole = require('react-dev-utils/clearConsole');
-var checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
-var formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
-var getProcessForPort = require('react-dev-utils/getProcessForPort');
-var openBrowser = require('react-dev-utils/openBrowser');
-var prompt = require('react-dev-utils/prompt');
-var pathExists = require('path-exists');
-var config = require('../config/webpack.config.dev');
-var paths = require('../config/paths');
+const chalk = require('chalk');
+const webpack = require('webpack');
+const WebpackDevServer = require('webpack-dev-server');
+const historyApiFallback = require('connect-history-api-fallback');
+const httpProxyMiddleware = require('http-proxy-middleware');
+const detect = require('detect-port');
+const clearConsole = require('react-dev-utils/clearConsole');
+const checkRequiredFiles = require('react-dev-utils/checkRequiredFiles');
+const formatWebpackMessages = require('react-dev-utils/formatWebpackMessages');
+const getProcessForPort = require('react-dev-utils/getProcessForPort');
+const openBrowser = require('react-dev-utils/openBrowser');
+const prompt = require('react-dev-utils/prompt');
+const pathExists = require('path-exists');
+const config = require('../config/webpack.config.dev');
+const paths = require('../config/paths');
 
-var useYarn = pathExists.sync(paths.yarnLockFile);
-var cli = useYarn ? 'yarn' : 'npm';
-var isInteractive = process.stdout.isTTY;
+const useYarn = pathExists.sync(paths.yarnLockFile);
+const cli = useYarn ? 'yarn' : 'npm';
+const isInteractive = process.stdout.isTTY;
 
 // Warn and crash if required files are missing
 if (!checkRequiredFiles([paths.appHtml, paths.appIndexJs])) {
