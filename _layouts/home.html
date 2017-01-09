@@ -4,12 +4,6 @@
     <meta charset="utf-8">
     <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
     {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
-    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-    {% if page.author %}
-      {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-    {% endif %}
-    {% include open-graph.html %}
-    {% if author.google.plus %}<link rel="author" href="https://plus.google.com/{{ author.google.plus }}"/>{% endif %}
 
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 
@@ -36,9 +30,8 @@
     {% if page.image.feature %}
     <div class="page-lead" style="background-image:url({{ site.url }}/images/{{ page.image.feature }})">
       <div class="wrap page-lead-content">
-        <h1>Skinny Bones</h1>
-        <h2>Jump start your Jekyll site with something thin and light.</h2>
-        <a href="{{ site.url }}/getting-started/" class="btn-inverse">Start Using Skinny Bones</a> &nbsp; or &nbsp; <a href="https://github.com/mmistakes/skinny-bones-jekyll" class="btn-inverse">View on GitHub</a>
+        <h1>Jun Woo Shin</h1>
+        <h2>Another personal site.</h2>
       </div><!-- /.page-lead-content -->
     </div><!-- /.page-lead -->
     {% endif %}
