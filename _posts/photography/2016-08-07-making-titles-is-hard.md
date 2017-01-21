@@ -1,7 +1,7 @@
 ---
 layout: article
 title: Making Titles is Hard
-categories: blog
+categories: photography
 modified:
 tags: []
 comments: true
