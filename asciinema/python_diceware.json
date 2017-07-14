@@ -1,0 +1,206 @@
+{
+  "version": 1,
+  "width": 290,
+  "height": 32,
+  "duration": 17.984871,
+  "command": "export PS1='$ '; /usr/bin/bash -l",
+  "title": "python_diceware",
+  "env": {
+    "TERM": "xterm-256color",
+    "SHELL": "/bin/zsh"
+  },
+  "stdout": [
+    [
+      0.013419,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007\u001b]7;file://vortex/home/junwoo/main/python_diceware\u0007"
+    ],
+    [
+      3.5e-05,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007"
+    ],
+    [
+      0.000344,
+      "$ "
+    ],
+    [
+      2.03453,
+      "p"
+    ],
+    [
+      0.156478,
+      "y"
+    ],
+    [
+      0.204757,
+      "t"
+    ],
+    [
+      0.058334,
+      "h"
+    ],
+    [
+      0.074941,
+      "o"
+    ],
+    [
+      0.130558,
+      "n"
+    ],
+    [
+      0.205584,
+      " "
+    ],
+    [
+      0.398819,
+      "\u0007"
+    ],
+    [
+      2.108156,
+      "d"
+    ],
+    [
+      0.039819,
+      "i"
+    ],
+    [
+      0.150867,
+      "\u0007ce"
+    ],
+    [
+      0.764873,
+      "."
+    ],
+    [
+      0.160578,
+      "py "
+    ],
+    [
+      1.670487,
+      "1"
+    ],
+    [
+      0.658246,
+      "\r\n"
+    ],
+    [
+      0.03782,
+      "15424\t\r\nbureau\t\r\n"
+    ],
+    [
+      0.00533,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007\u001b]7;file://vortex/home/junwoo/main/python_diceware\u0007\u001b]0;junwoo@vortex:~/main/python_diceware\u0007"
+    ],
+    [
+      1.7e-05,
+      "$ "
+    ],
+    [
+      0.535295,
+      "python dice.py 1"
+    ],
+    [
+      0.826451,
+      "\b\u001b[K"
+    ],
+    [
+      0.211301,
+      "1"
+    ],
+    [
+      0.121377,
+      "5"
+    ],
+    [
+      0.196624,
+      "\r\n"
+    ],
+    [
+      0.038772,
+      "62154\t63646\t22545\t33663\t45515\t55422\t63112\t52122\t34344\t16515\t36632\t14545\t41431\t32266\t25135\t\r\ntung\twg\tdelhi\tincur\tpickup\tstalk\tvessel\triot\tjake\tchock\tlocus\tbooby\tmaid\thall\tezra\t\r\n"
+    ],
+    [
+      0.005366,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007\u001b]7;file://vortex/home/junwoo/main/python_diceware\u0007\u001b]0;junwoo@vortex:~/main/python_diceware\u0007"
+    ],
+    [
+      2.1e-05,
+      "$ "
+    ],
+    [
+      0.764781,
+      "python dice.py 15"
+    ],
+    [
+      0.321025,
+      "\b\u001b[K"
+    ],
+    [
+      0.185165,
+      "\b\u001b[K"
+    ],
+    [
+      0.180233,
+      "2"
+    ],
+    [
+      0.069546,
+      "0"
+    ],
+    [
+      0.183872,
+      "\r\n"
+    ],
+    [
+      0.061525,
+      "34545\t55462\t33263\t46266\t52611\t52631\t51362\t41543\t33561\t51442\t44352\t66643\t31134\t33642\t56134\t62243\t52523\t61245\t31343\t45356\t\r\njoin\tsteele\thost\tpot\tsalvo\tsane\trate\tmaria\tidyll\treap\tonly\t%\tgerbil\timage\tsung\ttwisty\tsac\ttight\tglyph\tpepsi\t\r\n"
+    ],
+    [
+      0.005417,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007\u001b]7;file://vortex/home/junwoo/main/python_diceware\u0007\u001b]0;junwoo@vortex:~/main/python_diceware\u0007"
+    ],
+    [
+      1.8e-05,
+      "$ "
+    ],
+    [
+      2.156194,
+      "python dice.py 20"
+    ],
+    [
+      0.62692,
+      "\b\u001b[K"
+    ],
+    [
+      0.189723,
+      "5"
+    ],
+    [
+      0.176214,
+      "\r\n"
+    ],
+    [
+      0.038858,
+      "41323\t61613\t43243\t56224\t36641\t53151\t43643\t36466\t11214\t26364\t35215\t36516\t41446\t54526\t26411\t63565\t21632\t66544\t11616\t35216\t51342\t14451\t53611\t45365\t31123\t\r\n"
+    ],
+    [
+      2.4e-05,
+      "ly\ttree\tmyrrh\tswat\tlofty\tscat\tnot\tlinden\tabyss\tfrost\tkathy\tlinus\tmali\tsneak\tfroze\tweed\tcrisp\t75th\talive\tkatie\traoul\tbob\tshoe\tperil\tgenie\t\r\n"
+    ],
+    [
+      0.005294,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007\u001b]7;file://vortex/home/junwoo/main/python_diceware\u0007"
+    ],
+    [
+      1.7e-05,
+      "\u001b]0;junwoo@vortex:~/main/python_diceware\u0007$ "
+    ],
+    [
+      0.949577,
+      "python dice.py 25"
+    ],
+    [
+      1.258697,
+      "\r\u001b[C\u001b[C\u001b[K"
+    ]
+  ]
+}
