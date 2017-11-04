@@ -95,22 +95,6 @@ authoricon: copyright
 copyright: true
 
 # ---------------------------------------------------------------
-# SEO Settings
-# ---------------------------------------------------------------
-
-# Canonical, set a canonical link tag in your jekyll, you could use it for your SEO of blog.
-# See: https://support.google.com/webmasters/answer/139066
-# Tips: Before you open this tag, remember set up your URL in _config.yml ( ex. url: http://yourdomain.com )
-canonical: true
-
-# Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
-
-# If true, will add site-subtitle to index page, added in jekyll config.
-# subtitle: Subtitle
-index_with_subtitle: false
-
-# ---------------------------------------------------------------
 # Menu Settings
 # ---------------------------------------------------------------
 
@@ -119,7 +103,7 @@ menu:
   home: /
   # about: /about/
   categories: /categories/
-  tags: /tags/
+  # tags: /tags/
   archives: /archives/
   # sitemap: /sitemap.xml
   # commonweal: /404.html
@@ -144,15 +128,12 @@ menu_icons:
 
 
 
-
 # ---------------------------------------------------------------
 # Scheme Settings
 # ---------------------------------------------------------------
 
-# Schemes
+# Schemes [Muse | Mist | Pisces ]
 scheme: Muse
-#scheme: Mist
-#scheme: Pisces
 
 
 # ---------------------------------------------------------------
@@ -226,12 +207,11 @@ social_icons:
   # Icon Mappings.
   # KeyMapsToSocialItemKey: NameOfTheIconFromFontAwesome
   GitHub: github
-  Twitter: twitter
 
 
 # Sidebar Avatar
 # in directory: /assets/images/avatar.gif
-#avatar:
+# avatar:
 
 
 # Table Of Contents in the Sidebar
@@ -248,7 +228,7 @@ toc:
 # Creative Commons 4.0 International License.
 # http://creativecommons.org/
 # Available: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
-#creative_commons: by-nc-sa
+# creative_commons: by-nc-sa
 
 
 sidebar:
@@ -270,7 +250,7 @@ sidebar:
   b2t: true
 
   # Scroll percent label in b2t button
-  scrollpercent: true
+  scrollpercent: false
 
 
 # Blog rolls
