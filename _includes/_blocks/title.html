@@ -20,8 +20,6 @@
   {% capture title %}{{ __.title.category }} | {{ site.title }}{% endcapture %}
 {% when 'tag' %}
   {% capture title %}{{ __.title.tag }} | {{ site.title }}{% endcapture %}
-{% when 'schedule' %}
-  {% capture title %}{{ __.title.schedule }} | {{ site.title }}{% endcapture %}
 {% endcase %}
 
 {% assign title = title | strip_newlines %}
