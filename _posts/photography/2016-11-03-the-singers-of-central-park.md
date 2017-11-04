@@ -1,14 +1,13 @@
 ---
-layout: article
 title: The Singers of Central Park
+date: 2016-11-03
 categories: photography
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 <a data-flickr-embed="true" href="https://www.flickr.com/photos/shinjunwoo97/30454696332/in/dateposted-public/" title="DSC_7043.jpg"><img src="https://c5.staticflickr.com/9/8676/30454696332_05dda63cd3_k.jpg" width="100%" height="auto" alt="DSC_7043.jpg"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<!-- more -->
 
 > Nikon D5300  
 > 35mm | F/1.8 | 1/160 sec | ISO 400

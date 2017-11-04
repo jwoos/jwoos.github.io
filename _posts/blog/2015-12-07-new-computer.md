@@ -1,14 +1,13 @@
 ---
-layout: article
 title: New Computer
+date: 2015-12-07
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 I've always been into computers, but interestingly enough I never bought a good one that I actually wanted. I had a desktop which was just very slow but I lived with it as I didn't use the computer much. I then decided to buy a cheap laptop which I promprty broke the screen of. This was not good as I had been on a roll breaking a bunch of stuff, so again I was with my desktop again.
+
+<!-- more -->
 
 A few months later, I decided to just buy a chromebook for its cheap price and since I wouldn't be doing much with it anyways. I was ever so wrong, but I got to play around with linux thanks to that. That summer I actually got into a program in which they gave us a free laptop, a Lenovo Thinkpad T510. Admittedly a model that was 4-5 years old at the time but it ran fast and I was frankly amazed. I finally had a decent laptop to call my own and I used it for everything. However, I was never really happy with it: its size, its battery life, its appearance, just everything about it. So after about a year I resolved to get a new computer.
 

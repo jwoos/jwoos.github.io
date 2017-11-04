@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Another New Computer
+date: 2016-02-11
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 After dealing with a very old and sluggish desktop for a long time, I finally had enough and decided to build my own computer. This decision was a long time in coming as I never really had a compelling reason to make it seeing as I had a very capable laptop. But, a computer isn't just a computer, as I've learned. Desktops are not laptops. I wanted a home computer to game and work on without wanting to smash my screen. So I decided to take the leap. I've previously helped some of my friends pick their parts and build their computers. It was finally my turn.
+
+<!-- more -->
 
 Looking for parts was both exhiliarating and depressing. On one hand, I saw before me such a diverse array of possible parts that I was overwhelmed. There were so many very good parts, and each had an aura about it. However, the price tag made me scroll past them, as I had quite a limited budget. In my heart of course I wanted the best possible thing, but I knew it simply wasn't possible so I made a promise to buy it when in the future when I'm doing well and continued looking.
 

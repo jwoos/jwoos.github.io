@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Spread Too Thin
+date: 2015-11-08
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 Ever since I could remember, I was always so ambitious. There were so many things that I wanted to do and so many things that I wanted to learn. As you might guess, I never quite got around to the majority of the things in mind. In fact, of the few that I got around to doing, only a fraction ever got completed.
+
+<!-- more -->
 
 Back in high school, when I first got my camera I wanted to do all these projects. I wanted to make a stop motion video similar to one I saw on YouTube, I wanted to take long exposures, etc. I'm sad to say that I never got around to most of those ideas. The problem wasn't as clear then because it was just a hobby of mine with no real bearing on anything. However, the problem became slightly more concrete when I started doing that with my coding projects. I would often start one project, get distracted and think of another idea to start on. I had too many ideas and too short an attention span.
 

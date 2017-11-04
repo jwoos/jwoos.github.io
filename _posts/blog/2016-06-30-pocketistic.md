@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Pocketistic
+date: 2016-06-30
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 I like to think that I am a decent reader - Pocket certainly seemed to think so. Around the end of last year, I got an email from them claiming that I had made it to the top 5% of their readers. Wow! An amazing feat especially considering that I had started using the service around October or November (or perhaps people just don't read much on it...). I was pretty surprised reading the email, which led me to think about exactly how much I had read and that would have been that except Pocket does not provide *ANY* statistics at all.
+
+<!-- more -->
 
 Naturally, I was curious and decided to do some research as to if they had stats elsewhere. I did not find any such thing but I did get a look at their API documentation, which gave me hope. So, thinking that this would be a rather short project I decided to jump right into it. I set up a static page and wrote JavaScript to make a call to their API to retrieve data; after writing it I was pretty satisfied with myself and decided to give it a test run. I load the page and nothing. What? That couldn't possibly be right.
 

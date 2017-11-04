@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Why doesn't my school encourage learning?
+date: 2015-11-16
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 I'm a freshman in NYU Tandon School of Engineering.
+
+<!-- more -->
 
 As a computer science major, I was excited to find that I would be taking Python in my first semester, a language that I had some experience with already. I thought that it'd be fun taking the class and seeing all of the ways that the topic in discussion could be viewed in a new light by using things I had already learned. But I was ever so wrong.
 

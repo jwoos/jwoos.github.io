@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Making Titles is Hard
+date: 2016-08-07
 categories: photography
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 <a data-flickr-embed="true" data-header="true"  href="https://www.flickr.com/photos/shinjunwoo97/28805959866/in/dateposted-public/" title="DSC_6885.jpg"><img src="https://c3.staticflickr.com/9/8890/28805959866_376c508186_b.jpg" width="100%" height="auto" alt="DSC_6885.jpg"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+
+<!-- more -->
 
 > Nikon D5300  
 > 35mm | F/4 | 1/500 sec | ISO 100

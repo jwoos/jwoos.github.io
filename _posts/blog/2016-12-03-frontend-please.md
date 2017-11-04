@@ -1,14 +1,13 @@
 ---
-layout: article
 title: Frontend Please
+date: 2016-12-03
 categories: blog
-modified:
-tags: []
-comments: true
-ads: false
+tags:
 ---
 
 Ever since I finally got around to uninstalling Lazarus, I had determined that I would make an extension to fulfill the void that it left. About a week ago, I finally got around to start developing it - initially I was going to use plain JavaScript, HTML, and CSS but I decided that I might as well do it properly. So, I went ahead and took some time to configure Gulp so that I would be able to compile my Pug, SASS, lint my JavaScript and minify everything. This alone took a few hours as I searched for the best available solutions on the web and reading up on options and APIs. I didn't mind it too much - soon I was able to start writing actual code.
+
+<!-- more -->
 
 Not too far into writing my code, I realized that for the UI it would be infinitely easier on myself if I had some kind of reusable components. Now, reusable components is a big thing among frameworks these days - AngularJS, React, Inferno, Vue, Polymer - they all try to uphold the virtue DRY. So I started looking into these frameworks - I immediately dismissed AngularJS as I had trouble setting it up for web applications alone and the thought of setting it up for a different environment was not too appealing to me. I then took a look at VueJS - which seemed simple enough. But nothing is as easy as drop and go anymore - I had errors executing the script and found out that I would have to set up an environment and compile it. No thank you. I then took a look at ReactJS, one of the major frameworks and one which I had yet to learn. It would be a fine experience learning it while making something - or so I thought. I could not figure out how to set it up and did not want to spend the time so once again I dropped it.
 
