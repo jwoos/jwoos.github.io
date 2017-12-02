@@ -5,7 +5,7 @@ categories: photography
 tags:
 ---
 
-<a data-flickr-embed="true" href="https://www.flickr.com/photos/shinjunwoo97/30454696332/in/dateposted-public/" title="DSC_7043.jpg"><img src="https://c5.staticflickr.com/9/8676/30454696332_05dda63cd3_k.jpg" width="100%" height="auto" alt="DSC_7043.jpg"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+![](https://i.imgur.com/QPjqZ8P.jpg)
 
 <!-- more -->
 

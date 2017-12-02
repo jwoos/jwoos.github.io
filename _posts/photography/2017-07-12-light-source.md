@@ -1,11 +1,11 @@
 ---
 title: Light Source
-date: 2015-07-12
+date: 2017-07-12
 categories: photography
 tags:
 ---
 
-<a data-flickr-embed="true"  href="https://www.flickr.com/photos/shinjunwoo97/34990679424/in/dateposted-public/" title="IMG_9862"><img src="https://farm5.staticflickr.com/4286/34990679424_3922cbb702_k.jpg" width="100%" height="auto" alt="IMG_9862"></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
+![](https://i.imgur.com/psSpPZE.jpg)
 
 <!-- more -->
 
