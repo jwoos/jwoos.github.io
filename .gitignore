@@ -21,3 +21,5 @@ yarn-error.log
 .sass-cache/
 
 _site/
+.rbenv-version
+.rvmrc
