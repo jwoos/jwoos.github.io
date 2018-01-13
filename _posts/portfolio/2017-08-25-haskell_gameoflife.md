@@ -1,6 +1,6 @@
 ---
 title: Game of Life
-date: 2018-01-12
+date: 2017-08-25
 categories: portfolio
 tags:
 ---
