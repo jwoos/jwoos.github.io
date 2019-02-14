@@ -102,10 +102,13 @@ copyright: true
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  # about: /about/
-  categories: /categories/
-  # tags: /tags/
+  blog: /category/#/blog
+  portfolio: /category/#/portfolio
+  photography: /category/#/photography
   archives: /archives/
+  # about: /about/
+  # categories: /categories/
+  # tags: /tags/
   # sitemap: /sitemap.xml
   # commonweal: /404.html
 
@@ -117,9 +120,12 @@ menu:
 #   When an question mask icon presenting up means that the item has no mapping icon.
 menu_icons:
   enable: true
-  #KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
+  # KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
   home: home
   about: user
+  blog: pencil
+  portfolio: code
+  photography: camera
   categories: th
   schedule: calendar
   tags: tags
