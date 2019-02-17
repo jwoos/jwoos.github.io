@@ -101,7 +101,7 @@ copyright: true
 
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
-  home: /
+  # home: /
   blog: /category/#/blog
   portfolio: /category/#/portfolio
   photography: /category/#/photography
@@ -121,7 +121,7 @@ menu:
 menu_icons:
   enable: true
   # KeyMapsToMenuItemKey: NameOfTheIconFromFontAwesome
-  home: home
+  # home: home
   about: user
   blog: pencil
   portfolio: code
