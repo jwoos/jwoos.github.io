@@ -5,7 +5,7 @@ isSinglePage = true
 description = "Jun Woo Shin's site"
 
 # Header Configuration
-avatar = "img/profile-picture.jpg"
+avatar = "images/profile-picture.png"
 
 # disqus is a comment system. see https://disqus.com
 disqusShortname = ""
