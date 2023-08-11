@@ -1,6 +1,10 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ replace .Name '-' ' ' | title }}"
 date: {{ .Date }}
-draft: true
+draft: true # Set 'false' to publish
+description: ""
+archive:
+     - {{ .Date.Year }}
+tags:
+-
 ---
-

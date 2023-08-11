@@ -1,0 +1,10 @@
+{{ block "meta" . }}{{ partial "head/meta" . }}{{ end }}
+{{ block "postcss" . }}{{ partial "postcss" "css/main.css" }}{{ end }}
+
+{{- $styles := resources.Get "css/override.css" -}}
+{{- if eq hugo.Environment "development" -}}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{ else -}}
+{{- $styles := $styles | minify | fingerprint | resources.PostProcess -}}
+<link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}">
+{{ end -}}
