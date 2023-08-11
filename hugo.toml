@@ -1,0 +1,4 @@
+baseURL = 'https://jwoos.com/'
+languageCode = 'en-us'
+title = 'Jun Woo Shin'
+theme = 'lowkey'

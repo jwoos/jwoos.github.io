@@ -1,0 +1,3 @@
+[submodule "themes/lowkey"]
+	path = themes/lowkey
+	url = git@github.com:nixentric/Lowkey-Hugo-Theme.git
