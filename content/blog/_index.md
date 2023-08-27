@@ -1,6 +1,4 @@
 ---
-title: "Blog"
+title: ""
 header: "" 
 ---
-
-See what I’ve written lately:
