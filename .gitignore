@@ -1,4 +1,4 @@
 node_modules
 .DS_Store
-resources/_gen/
+resources/
 public/
