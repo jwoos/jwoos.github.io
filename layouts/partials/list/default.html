@@ -8,6 +8,8 @@
     {{ end }}
     </div>
     <div class="mt-2">
-			<a class="inline-flex  gap-2 text-sm font-semibold items-center text-indigo-700 hover:text-indigo-600" href="{{ .Permalink }}">Read This Article <span class="w-4 h-4 stroke-2">{{ partial "processor/svg" "arrow-right" }}</span> </a>
+			<a class="inline-flex gap-2 text-sm font-semibold items-center text-indigo-700 hover:text-indigo-600 hover:translate-x-1 ease-in-out duration-200" href="{{ .Permalink }}">
+				Read This Article <span class="w-4 h-4 stroke-2">{{ partial "processor/svg" "arrow-right" }}</span>
+			</a>
 		</div>
 </article>
