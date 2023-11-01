@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2015 on Jun Woo Shin</title>
+    <link>https://jwoos.com/archive/2015/</link>
+    <description>Recent content in 2015 on Jun Woo Shin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Mon, 07 Dec 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jwoos.com/archive/2015/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>New Computer</title>
+      <link>https://jwoos.com/blog/2015-12-07-new-computer/</link>
+      <pubDate>Mon, 07 Dec 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2015-12-07-new-computer/</guid>
+      <description>I&amp;rsquo;ve always been into computers, but interestingly enough I never bought a good one that I actually wanted.</description>
+    </item>
+    <item>
+      <title>Why doesn&#39;t my school encourage learning?</title>
+      <link>https://jwoos.com/blog/2015-11-16-why-doesnt-my-school-encourage-learning/</link>
+      <pubDate>Mon, 16 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2015-11-16-why-doesnt-my-school-encourage-learning/</guid>
+      <description>I&amp;rsquo;m a freshman in NYU Tandon School of Engineering.
+As a computer science major, I was excited to find that I would be taking Python in my first semester, a language that I had some experience with already.</description>
+    </item>
+    <item>
+      <title>Diceware</title>
+      <link>https://jwoos.com/projects/2015-11-15-diceware/</link>
+      <pubDate>Sun, 15 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/projects/2015-11-15-diceware/</guid>
+      <description>GitHub: diceware
+Demo: N/A
+After reading an article about a little girl making diceware passwords and selling them, I became interested in automating that process.</description>
+    </item>
+    <item>
+      <title>Spread Too Thin</title>
+      <link>https://jwoos.com/blog/2015-11-08-spread-too-thin/</link>
+      <pubDate>Sun, 08 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2015-11-08-spread-too-thin/</guid>
+      <description>Ever since I could remember, I was always so ambitious. There were so many things that I wanted to do and so many things that I wanted to learn.</description>
+    </item>
+    <item>
+      <title>GitHub Blog</title>
+      <link>https://jwoos.com/blog/2015-11-05-github-blog/</link>
+      <pubDate>Thu, 05 Nov 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2015-11-05-github-blog/</guid>
+      <description>I&amp;rsquo;ve been meaning to make blog using GitHub&amp;rsquo;s built in system using Jekyll. But of course I got distracted and never quite got around to it.</description>
+    </item>
+    <item>
+      <title>Geocoder</title>
+      <link>https://jwoos.com/projects/2015-10-02-web_geocoder/</link>
+      <pubDate>Fri, 02 Oct 2015 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/projects/2015-10-02-web_geocoder/</guid>
+      <description>GitHub: geocoder
+Demo: https://jwoos.github.io/web_geocoder/
+I was playing around with Google&amp;rsquo;s location API, when I found the geocoding API.</description>
+    </item>
+  </channel>
+</rss>

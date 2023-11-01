@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rainbow GIF</title>
+<meta name="description" content="GitHub: rainbowgif
+Demo: N/A
+I&rsquo;m a huge fan of Slack&rsquo;s custom emojis and the various collections that have surfaced.">
+<link rel="canonical" href="https://jwoos.com/projects/2019-02-16-go_rainbowgif/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="https://jwoos.com/css/app.min.d915de4e3769d8a8f07787bd8c41c070c42b975a253c064f3b47be7a8422faaf.css" integrity="sha256-2RXeTjdp2Kjwd4e9jEHAcMQrl1olPAZPO0e+eoQi+q8=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="https://jwoos.com/">
+        <img srcset="/images/profile-picture_hu4a6a454cc261c6515f2cb5e952f8336e_33555_80x80_fill_q90_box_smart1_3.png 80w" src="/images/profile-picture.png" width="150" height="150" alt="Jun Woo Shin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="https://jwoos.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Jun Woo Shin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-center uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/blog">Blog</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/projects">Projects</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/photography">Photography</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/tags">Tags</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/archive">Archive</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-10">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-4xl leading-snug font-bold text-gray-900">Rainbow GIF</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+<time datetime="2019-02-16 00:00:00 &#43;0000 UTC" title="2019-02-16 00:00:00 &#43;0000 UTC">
+    16 February 2019
+</time>
+        
+        </div>
+    </header>
+    <section class="content text-lg text-gray-800">
+    <p>GitHub: <a href="https://github.com/jwoos/go_rainbowgif">rainbowgif</a><br>
+Demo: N/A</p>
+<!-- raw HTML omitted -->
+<p>I&rsquo;m a huge fan of Slack&rsquo;s custom emojis and the various collections that have surfaced. Among them, my favorite is the party parrot one. What stood out to me is the rainbow color that it has and I thought it&rsquo;d be fun if I could apply it to any GIF to produce fun emojis. So naturally, I did.</p>
+<h1 id="what-does-it-do">What does it do?</h1>
+<p>It overlays colors over each frame of the GIF to produce a rainbow effect similar to that of the party parrot. It seems to shift between colors gradually thanks to some math I&rsquo;ll get into in a bit! It should work with short GIFs but works best with longer ones as the color change will be more gradual.</p>
+<h1 id="how">How?</h1>
+<h2 id="tldr">TL;DR</h2>
+<p>A gradient is generated based on the number of frames the input GIF has. Then the colors are applied to the respective frame and made into a new GIF.</p>
+<p>All the colors in this uses <a href="https://github.com/lucasb-eyer/go-colorful">colorful</a> as the standard color library did not have everything I needed.</p>
+<h2 id="gradient">Gradient</h2>
+<p>Prior to constructing a gradient we have the colors that the gradient will use as its points: red, orange, yellow, green, blue, orange, violet, and red prime. As you may have noticed, these are the colors of the rainbow - the last color is to create the illusion of an endless loop in a GIF. These main 8 colors are constant throughout inputs - I hope to allow custom starting colors in the future.</p>
+<p>Once the 8 colors are ready to go the program then takes the number of frames a GIF has. There are three cases that can arise from this: the number of frames can be less than, equal to, or greater than 8. All cases are basically handled the same way but the second case has a special attribute to it. If there are 8 frames then the colors used will be just the 8 starting colors I mentioned previously. However, this will obviously yield a very abrupt change frame to frame and will not look nice at all (this also applies to the first case).</p>
+<p>How do we get the color for a GIF whose frame count is not equal to 8? The answer is to use positions. If we imagine those 8 colors to represent positions between 0 and 1, with the first color being 0 and last color being 1 then we can have a distribution. Since there are infinite points since 0 and 1 it would be impossible to generate every possible color (besides there being finite colors). Fortunately, the number of colors needed is known - the number of frames in the GIF.</p>
+<p>The frames are also distributed into a distribution between 0 and 1, with the first frame being 0 and the last frame being 1. Now we have both our frames and the colors on the same scale. However, that still doesn&rsquo;t give us the colors for most if not all of the frames.</p>
+<h3 id="relative-position">Relative Position</h3>
+<p>In order to get the colors for all the frames, it is necessary to know what two colors a frame is located between in terms of the distribution which is why the positions were calculated beforehand. Knowing their absolute distribution, or position, we can get the relative position - or the position relative to two absolute positions.</p>
+<p>It gets the closest color(s) based on the absolute position. Using this color as the new 0 and the next color as the new 1, the position of the frame can be scaled. This is the relative position of the color to be applied to the frame. The relative position shows how close the frame&rsquo;s color is to either color and is used in blending. Doing this for all of the frames results in a smooth transition between colors as well as looping.</p>
+<h2 id="blending">Blending</h2>
+<p>Now that the color for the frame is know, we can just overlay it right? Wrong. It turns out that the science of blending colors is actually pretty complex. I initially just tried overlaying it with different opacity and it looked horrible. I later learned that this is called alpha blending (or normal) since it works with the alpha channel. After some trial and error in Photoshop, I found one that would retain the underlying image&rsquo;s features - color blending.</p>
+<p>Color blending works in HCL (hue, chroma, luma) and preserves the bottom layer&rsquo;s luma while adopting the top layer&rsquo;s hue and chroma. This yielded the result I wanted. I also had to ignore and pixel with an alpha value of 0 in order to avoid accidentally coloring in any pixel that shouldn&rsquo;t have been visible. Just blend all the pixels and voila we&rsquo;re done!</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>This was definitely a fun project and I learned that colors are actually very complex, especially when it comes to color space and blending. I hope to extend the functionalities in the future but for now, I think it&rsquo;s good enough to create some new emojis for Slack!</p>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2023 — <a class="hover:text-gray-500" href="https://jwoos.com/">Jun Woo Shin</a> <span class=" font-normal ">with</span> <a class="hover:text-gray-500" href="https://github.com/nixentric/Lowkey-Hugo-Theme" target="_blank" rel="noopener noreferrer">Lowkey</a>
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    <li><a class="hover:text-gray-500" href="mailto:hello@jwoos.com" target="_blank" rel="noopener noreferrer">Email</a></li><li><a class="hover:text-gray-500" href="https://www.instagram.com/shin.junwoo/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a class="hover:text-gray-500" href="https://github.com/jwoos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+</div>
+</footer></body>
+</html>

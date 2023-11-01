@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en-us" class="scroll-smooth">
+    <head><meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pocketistic</title>
+<meta name="description" content="I like to think that I am a decent reader - Pocket certainly seemed to think so.">
+<link rel="canonical" href="https://jwoos.com/blog/2016-06-30-pocketistic/">
+<link rel="robots" href="/robots.txt" />
+
+<link rel="stylesheet" href="https://jwoos.com/css/app.min.d915de4e3769d8a8f07787bd8c41c070c42b975a253c064f3b47be7a8422faaf.css" integrity="sha256-2RXeTjdp2Kjwd4e9jEHAcMQrl1olPAZPO0e+eoQi+q8=" ></head>
+    <body class="max-w-screen-md px-10 mx-auto">
+        <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+    
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden" >
+    <a href="https://jwoos.com/">
+        <img srcset="/images/profile-picture_hu4a6a454cc261c6515f2cb5e952f8336e_33555_80x80_fill_q90_box_smart1_3.png 80w" src="/images/profile-picture.png" width="150" height="150" alt="Jun Woo Shin">
+    </a>
+</div>
+
+    <div class="flex flex-col gap-5">
+    <a href="https://jwoos.com/">
+    
+    <h3 class="text-center sm:text-left text-4xl font-extrabold text-gray-800 ">Jun Woo Shin</h3>
+    
+</a>
+    <nav>
+    <ul class="flex flex-wrap justify-center uppercase text-xs font-semibold gap-7 text-gray-500 ">
+        
+        
+        <li class="hover:text-gray-500"><a href="/">Home</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/blog">Blog</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/projects">Projects</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/photography">Photography</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/tags">Tags</a></li>
+        
+        <li class="hover:text-gray-500"><a href="/archive">Archive</a></li>
+        
+    </ul>
+</nav>
+    </div>
+</header>
+        <main id="content">
+<article class="flex flex-col gap-10">
+    <header class="flex flex-col gap-2">
+        <h2 class="text-4xl leading-snug font-bold text-gray-900">Pocketistic</h2>
+
+        <div class="text-sm font-semibold text-gray-500 flex gap-3">
+        
+<time datetime="2016-06-30 00:00:00 &#43;0000 UTC" title="2016-06-30 00:00:00 &#43;0000 UTC">
+    30 June 2016
+</time>
+        
+        </div>
+    </header>
+    <section class="content text-lg text-gray-800">
+    <p>I like to think that I am a decent reader - Pocket certainly seemed to think so. Around the end of last year, I got an email from them claiming that I had made it to the top 5% of their readers. Wow! An amazing feat especially considering that I had started using the service around October or November (or perhaps people just don&rsquo;t read much on it&hellip;). I was pretty surprised reading the email, which led me to think about exactly how much I had read and that would have been that except Pocket does not provide <em>ANY</em> statistics at all.</p>
+<!-- raw HTML omitted -->
+<p>Naturally, I was curious and decided to do some research as to if they had stats elsewhere. I did not find any such thing but I did get a look at their API documentation, which gave me hope. So, thinking that this would be a rather short project I decided to jump right into it. I set up a static page and wrote JavaScript to make a call to their API to retrieve data; after writing it I was pretty satisfied with myself and decided to give it a test run. I load the page and nothing. What? That couldn&rsquo;t possibly be right.</p>
+<pre><code>No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://test-cors.org' is therefore not allowed access.
+</code></pre>
+<p>Of course they didn&rsquo;t enable CORS&hellip; last time the API was updated was in 2012. So what would have been a relatively simple static website suddenly needed a backend to proxy the calls. Alright, no big deal I&rsquo;d use Node.js and Express to create a simple proxy. However, when I started working on it something in me would not let me do a half assed job - if I&rsquo;m going to do it, I might as well try my best. I spent a while thinking about how my files might be structured and how I might be able to scale the codebase later on. Not only that, but as I worked on authentication in the backend, I realized that there was a much greater potential. I could make a full fledged web app and not only show basic stats but calculate them as well. I could show which domain one had the most articles from, average word count, monthly average, percentile among users, etc. In short, I could become the stats provider that Pocket was missing.</p>
+<p>So I got to work. I decided to use postgresql as my RDBMS mostly because it&rsquo;s simple to set up on Heroku and I didn&rsquo;t want to bother to deploy it on AWS or pay for it for that matter. I stuck with Express and Node.js for backend and got to writing code. In writing the authentication calls, I realized that I needed a way to manage sessions. It would have been quite annoying to have to log in every time I refreshed or quit the browser, so I was thinking about using cookies. After much research, I was ready to implement the sessions when I came across the express-session middleware and connect-pg-simple. The former made it <strong>extremely</strong> easy to manage sessions and interact with it while the latter allowed me to actually store these sessions in a database, allowing for persistence. After authentication was seen to be working I started working on proxying the calls, which wasn&rsquo;t too difficult. I just defined a GET endpoint which takes query parameters and then take all of it and send it off to Pocket to get the actual data.</p>
+<p>After I set up the proxying endpoint, it was the moment of truth: what kind of data was I going to get from this (their documentation doesn&rsquo;t specify)? Id, title, url, created, updated, read, etc&hellip; Nothing that I wasn&rsquo;t expecting but it&rsquo;s certanly still a lot of data that I&rsquo;d be able to work with. I was especially excited that they had the word count field which reduced the work for me and since it was my initial reason for starting this whole project. I pored over the data a while before I realized that I couldn&rsquo;t make an API call to get all this data each time. The list for mine was huge and I can imagine a user refreshing the page a few times on a slow connection or for whatever reason. It just would not be optimal to be proxying that much data constantly so I decided I wanted it to be in the database to access without rate limits and a dependency of outside sopurce. So I started thinking about how I might construct this when I realized that I&rsquo;d need an ORM. Here we go again with a scope increase.</p>
+<p>Looking for JavaScript ORM&rsquo;s I settled for Sequelize. I had to drop the current tables in the database and run Sequelize to generate models as well as migrations. This was becoming way too big for a side project, but surprisingly I enjoyed this increase in scope. A rather nice compliment for what I&rsquo;ve been doing at work. After having done that, I realized that I&rsquo;d need some way of relating sessions and users (a user can have multiple sessions: desktop, mobile, laptop, etc.). It would have been a perfect chance to create a migration to add a column to the session table with a foreign key on the user&rsquo;s primary key&hellip; except I had no idea how to do it. My session manager is still currently using connect-pg-simple, meaning that it does not use the ORM and that it doesn&rsquo;t seem like I have much option to change what gets saved. I took a look at sequelize-session and while it seems to give more options, it did not seem to do what I want it to do so I might have to fork it and just implement the feature myself. I also want to implement logic to cache all the data in a one to many relationship (user to articles) in the database which would refresh if it passes a certain threshold or is triggered manually. Sounds like extensive work and I&rsquo;d have to think about the optimal way to do it.</p>
+<p>Despite the huge increase in work, this has been a pretty good experience so far. I&rsquo;ve learned a lot and hopefully I can learn more as I continue to work on this. Planning on having the core features done by at least a month from now (this is a sideproject after all). As a sidenote I hope I can find a session manager with all the features I want since I don&rsquo;t really want to implement it myself&hellip;</p>
+
+    </section>
+    
+    
+    
+
+    
+    
+
+    <footer>
+        
+
+    </footer>
+</article>
+
+        </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1 ">
+    © 2023 — <a class="hover:text-gray-500" href="https://jwoos.com/">Jun Woo Shin</a> <span class=" font-normal ">with</span> <a class="hover:text-gray-500" href="https://github.com/nixentric/Lowkey-Hugo-Theme" target="_blank" rel="noopener noreferrer">Lowkey</a>
+</div>
+    <div class="text-xs font-semibold text-gray-500 order-1 sm:order-2">
+    <ul class="flex sm:justify-end gap-5">
+    <li><a class="hover:text-gray-500" href="mailto:hello@jwoos.com" target="_blank" rel="noopener noreferrer">Email</a></li><li><a class="hover:text-gray-500" href="https://www.instagram.com/shin.junwoo/" target="_blank" rel="noopener noreferrer">Instagram</a></li><li><a class="hover:text-gray-500" href="https://github.com/jwoos" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+    </ul>
+</div>
+</footer></body>
+</html>

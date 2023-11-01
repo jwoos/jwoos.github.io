@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2018 on Jun Woo Shin</title>
+    <link>https://jwoos.com/archive/2018/</link>
+    <description>Recent content in 2018 on Jun Woo Shin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Fri, 16 Feb 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jwoos.com/archive/2018/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leaving Work</title>
+      <link>https://jwoos.com/blog/2018-02-16-leaving-work/</link>
+      <pubDate>Fri, 16 Feb 2018 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2018-02-16-leaving-work/</guid>
+      <description>There&amp;rsquo;s a certain sadness in leaving a job. Sure it&amp;rsquo;s not graduating from school or leaving a close group of friends, but nevertheless each time I feel a bit melancholy.</description>
+    </item>
+    <item>
+      <title>C Snake</title>
+      <link>https://jwoos.com/projects/2018-01-12-c_snake/</link>
+      <pubDate>Fri, 12 Jan 2018 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/projects/2018-01-12-c_snake/</guid>
+      <description>GitHub: snake
+Demo: N/A
+As I was an avid user of terminal applications as well as command line applications, I came to learn about ncurses, a TUI library.</description>
+    </item>
+  </channel>
+</rss>

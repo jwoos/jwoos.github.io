@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2019 on Jun Woo Shin</title>
+    <link>https://jwoos.com/archive/2019/</link>
+    <description>Recent content in 2019 on Jun Woo Shin</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Sat, 09 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jwoos.com/archive/2019/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>CHIP8</title>
+      <link>https://jwoos.com/projects/2019-03-09-go_chip8/</link>
+      <pubDate>Sat, 09 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/projects/2019-03-09-go_chip8/</guid>
+      <description>GitHub: chip8
+Demo: N/A
+I&amp;rsquo;ve always been interested in emulation - it seemed incredible that we could bring back past hardware and software.</description>
+    </item>
+    <item>
+      <title>Rainbow GIF</title>
+      <link>https://jwoos.com/projects/2019-02-16-go_rainbowgif/</link>
+      <pubDate>Sat, 16 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/projects/2019-02-16-go_rainbowgif/</guid>
+      <description>GitHub: rainbowgif
+Demo: N/A
+I&amp;rsquo;m a huge fan of Slack&amp;rsquo;s custom emojis and the various collections that have surfaced.</description>
+    </item>
+    <item>
+      <title>Done with School</title>
+      <link>https://jwoos.com/blog/2019-01-02-done-with-school/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      <guid>https://jwoos.com/blog/2019-01-02-done-with-school/</guid>
+      <description>After spending nearly your whole life doing something, it&amp;rsquo;s kind of weird to just stop. Sure, school sucked but it just sort of became a part of my life.</description>
+    </item>
+  </channel>
+</rss>
