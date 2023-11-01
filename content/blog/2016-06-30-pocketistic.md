@@ -5,7 +5,7 @@ date: 2016-06-30
 description: ""
 tags:
 archive:
-	- 2016
+    - 2016
 ---
 
 I like to think that I am a decent reader - Pocket certainly seemed to think so. Around the end of last year, I got an email from them claiming that I had made it to the top 5% of their readers. Wow! An amazing feat especially considering that I had started using the service around October or November (or perhaps people just don't read much on it...). I was pretty surprised reading the email, which led me to think about exactly how much I had read and that would have been that except Pocket does not provide *ANY* statistics at all.

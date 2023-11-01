@@ -5,7 +5,7 @@ date: 2016-12-03
 description: ""
 tags:
 archive:
-	- 2015
+    - 2016
 ---
 
 Ever since I finally got around to uninstalling Lazarus, I had determined that I would make an extension to fulfill the void that it left. About a week ago, I finally got around to start developing it - initially I was going to use plain JavaScript, HTML, and CSS but I decided that I might as well do it properly. So, I went ahead and took some time to configure Gulp so that I would be able to compile my Pug, SASS, lint my JavaScript and minify everything. This alone took a few hours as I searched for the best available solutions on the web and reading up on options and APIs. I didn't mind it too much - soon I was able to start writing actual code.

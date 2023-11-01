@@ -5,7 +5,7 @@ date: 2016-07-10
 description: ""
 tags:
 archive:
-	- 2016
+    - 2016
 ---
 
 I've never considered myself to be especially unhealthy or not fit. There was a period in time in which I rarely went outside around early elementary school days, but besides that I was actively going out to play. I never preferred to stay in if I had to option of going out to play tag, bike, and so on. In middle school I started playing more sports but with a big focus on handball. I would go to school early just to play and on weekends you would find me on a handball court for hours. Some would say it's not a real sport, but it's undeniable the amount of physical fatigue one experiences while playing it. Roll into high school.

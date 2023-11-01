@@ -5,7 +5,7 @@ date: 2016-05-28
 description: ""
 tags:
 archive:
-	- 2016
+    - 2016
 ---
 
 It's been a few months since my last post because I've just been so busy with school. Now that school is over I'd like to get back in the habit of writing. I feel like it'll be a repeat of last time but I'll try not to...

@@ -5,7 +5,7 @@ date: 2016-02-11
 description: ""
 tags:
 archive:
-	- 2016
+    - 2016
 ---
 
 After dealing with a very old and sluggish desktop for a long time, I finally had enough and decided to build my own computer. This decision was a long time in coming as I never really had a compelling reason to make it seeing as I had a very capable laptop. But, a computer isn't just a computer, as I've learned. Desktops are not laptops. I wanted a home computer to game and work on without wanting to smash my screen. So I decided to take the leap. I've previously helped some of my friends pick their parts and build their computers. It was finally my turn.

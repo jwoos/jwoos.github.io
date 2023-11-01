@@ -5,7 +5,7 @@ date: 2019-01-02
 description: ""
 tags:
 archive:
-	- 2019
+    - 2019
 ---
 
 After spending nearly your whole life doing something, it's kind of weird to just *stop*. Sure, school sucked but it just sort of became a part of my life. Nothing really prepared me for how it feels to be just done with it all.

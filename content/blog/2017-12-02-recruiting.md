@@ -5,7 +5,7 @@ date: 2017-12-02
 description: ""
 tags:
 archive:
-	- 2017
+    - 2017
 ---
 
 At the end of my summer, I realized with dread that I hadn't done any studying for interviews at all or started looking for jobs at all. I'm sure everyone can relate to just how annoying it is to find a job whether it be an internship or a part time job. Furthermore, I'm sure those of us in the software development or a similar field has experienced the extreme grind of going through Leetcode or CTCI. It's not fun, especially if pushed off until the last moment as I had done. But no matter, I was determined to get a good internship so I sat down and went to work.

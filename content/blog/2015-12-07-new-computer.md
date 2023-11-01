@@ -5,7 +5,7 @@ date: 2015-12-07
 description: ""
 tags:
 archive:
-	- 2015
+    - 2015
 ---
 
 I've always been into computers, but interestingly enough I never bought a good one that I actually wanted. I had a desktop which was just very slow but I lived with it as I didn't use the computer much. I then decided to buy a cheap laptop which I promprty broke the screen of. This was not good as I had been on a roll breaking a bunch of stuff, so again I was with my desktop again.
