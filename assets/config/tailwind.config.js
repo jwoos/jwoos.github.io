@@ -10,26 +10,26 @@ module.exports = {
 		"./content/**/*.md"
 	],
 	theme: {
+		fontFamily: {
+			'sans' : [
+				'"Poppins"',
+				'"Inter"',
+				'-apple-system',
+				'BlinkMacSystemFont',
+				'avenir next',
+				'avenir',
+				'segoe ui',
+				'helvetica neue',
+				'helvetica',
+				'Cantarell',
+				'Ubuntu',
+				'roboto',
+				'noto',
+				'arial',
+				'sans-serif'
+			],
+		},
 		extend: {
-			fontFamily: {
-				'sans' : [
-					'"Poppins"',
-					'"Inter"',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'avenir next',
-					'avenir',
-					'segoe ui',
-					'helvetica neue',
-					'helvetica',
-					'Cantarell',
-					'Ubuntu',
-					'roboto',
-					'noto',
-					'arial',
-					'sans-serif'
-				],
-			},
 		},
 	},
 	plugins: [],
